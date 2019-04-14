@@ -1,0 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600);
+@import url(https://fonts.googleapis.com/css?family=Rozha+One);
+
+
+
+* {
+/* building a responsive grid-view so that all HTML elements have the box-sizing property set to border-box. This makes sure that the padding and border are included in the total width and height of the elements.*/
+  box-sizing: border-box;
+
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.book-cover {
+  display: block;
+  margin: 0 auto;
+
+/* decreasing size of book cover img*/
+  width: 100px;
+
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.entry {
+/* removing to creating small spacing between blocks on all sides  */
+  /* margin: 30px 0px; */
+  padding: 20px 50px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
+}
+
+.entry:before {
+  content: attr(nyt-rank);
+  font-family: "Rozha One", serif;
+  font-size: 1.7rem;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+
+/* reducing book number box padding to match number size*/
+  padding: 6px 6px;
+  text-align: center;
+
+/* moving book number inside of the box*/
+  margin-bottom: 20px;
+  -webkit-transform: translate(-10px);
+          transform: translate(-10px);
+
+/* decreasing book number border width*/
+  border: 2px solid #282c37;
+  background-color: #fff;
+
+/* removing circle; making book border square*/
+  /* border-radius: 50%; */
+  color: #282c37;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
+}
+
+#best-seller-titles {
+  display: grid;
+  grid-gap: 0.5rem;
+  /* max-width: 475px; */
+  /* max-width: 100%;  */
+  margin: 120px auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+#best-seller-titles a {
+  margin: 40px 0px 0px 0px;
+  text-decoration: none;
+  color: #2b90d9;
+  line-height: 0.2;
+}
+#best-seller-titles h1, h2, h3, h4 {
+  color: #282c37;
+}
+#best-seller-titles p {
+  color: #333030;
+  line-height: 1.4;
+}
+#best-seller-titles .publisher {
+  color: #333030;
+}
+#best-seller-titles .stats hr {
+  opacity: 0.5;
+}
+#best-seller-titles .stats p {
+  color: #282c37;
+}
+
+#masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  z-index: 9999;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0px 1px 5px 0px #777;
+  transition: 200ms;
+}
+#masthead img {
+  transition: 100ms;
+}
+
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+/* @media (min-width: 1281px) {
+
+  //CSS
+
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  #best-seller-titles {
+    display: grid;
+    grid-gap: 0.5rem;
+    /* max-width: 475px; */
+    /* max-width: 100%;  */
+    margin: 120px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  #best-seller-titles {
+    display: grid;
+    grid-gap: 0.5rem;
+    /* max-width: 475px; */
+    /* max-width: 100%;  */
+    margin: 120px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  #best-seller-titles {
+    display: grid;
+    grid-gap: 0.5rem;
+    /* max-width: 475px; */
+    /* max-width: 100%;  */
+    margin: 120px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  #best-seller-titles {
+    display: grid;
+    grid-gap: 0.5rem;
+    /* max-width: 475px; */
+    /* max-width: 100%;  */
+    margin: 120px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  #best-seller-titles {
+    display: grid;
+    grid-gap: 0.5rem;
+    /* max-width: 475px; */
+    /* max-width: 100%;  */
+    margin: 120px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
