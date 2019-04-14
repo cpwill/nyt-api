@@ -7,3 +7,6 @@
 3) On a large screen the books should be displayed two across with very little margin on the sides. On a small screen they can be in a single column.
 
 4) You must demo this assignment in your discussion (or beforehand).
+
+https://developer.nytimes.com/my-apps/539
+https://console.developers.google.com/apis/credentials/key/47c55704-0da2-48d1-9b65-d0c568fb5763?project=si539-237618&supportedpurview=project
